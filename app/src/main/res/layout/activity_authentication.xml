@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Authentication"
+    android:background="@drawable/back10">
+
+    <TextView
+        android:id="@+id/TV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias=".1"
+        android:textSize="20sp"
+        android:alpha="0.9"
+        android:textStyle="bold"
+        android:text="Enter Phone Number For Otp\nVerificaton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:alpha="0.9"
+        android:text="This number will be shown to the passengers\nand will used for communication in future."
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV1"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_bias=".42"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:elevation="10dp"
+        android:onClick="goto_verification"
+        android:translationZ="10dp"
+        android:stateListAnimator="@null"
+        android:text="@string/generate_otp"
+        android:padding="8dp"
+        android:gravity="center"
+        style="@style/ButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Phone_no"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        app:boxCornerRadiusTopStart="15dp"
+        app:layout_constraintHorizontal_bias=".8"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxBackgroundMode="filled"
+        app:boxBackgroundColor="#FFFFFF"
+        app:hintTextColor="@color/teal_700"
+        app:hintTextAppearance="@style/HintText"
+        app:boxStrokeColor="@color/maroon"
+        app:endIconMode="clear_text"
+        style="@style/LoginTextInputLayoutStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:counterOverflowTextColor="@color/maroon"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:startIconDrawable="@drawable/contact_phone_24"
+        app:counterTextAppearance="@style/CounterText"
+        app:layout_constraintVertical_bias="0.3">
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/Phone_no_ed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:inputType="number"
+        android:hint="@string/enter_phone_no"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Country_code"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:boxBackgroundMode="filled"
+        app:boxBackgroundColor="#FFFFFF"
+        app:hintTextColor="@color/teal_700"
+        app:hintTextAppearance="@style/HintText"
+        app:boxStrokeColor="@color/maroon"
+        app:boxCornerRadiusTopStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:errorEnabled="true"
+        app:helperText="Example +91"
+        app:layout_constraintHorizontal_bias="0"
+        app:errorTextAppearance="@style/ErrorText"
+        app:errorTextColor="@color/maroon"
+        style="@style/LoginTextInputLayoutStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:endIconMode="dropdown_menu">
+
+    <AutoCompleteTextView
+        android:id="@+id/code"
+        android:layout_width="match_parent"
+        android:paddingStart="10dp"
+        android:layout_height="50dp"
+        android:text="+91"
+        android:hint="@string/code"
+        android:inputType="text"
+        android:textSize="16sp"
+        tools:ignore="RtlSymmetry" />
+    </com.google.android.material.textfield.TextInputLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

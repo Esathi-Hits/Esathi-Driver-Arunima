@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/map_view1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <EditText
+        android:id="@+id/auto_suggest"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="20dp"
+
+        android:background="@android:color/white"
+        android:ems="10"
+        android:elevation="30dp"
+        android:drawableStart="@drawable/ic_baseline_search_24"
+        android:imeOptions="actionSearch"
+        android:hint="@string/search"
+        android:inputType="textPersonName"
+        android:paddingStart="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/auto_suggest"
+        android:layout_below="@+id/auto_suggest" />
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/warning"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/current_location"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/my_location"
+        android:elevation="30dp"
+        android:layout_marginEnd="15dp"
+
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/roundcorner"
+        app:layout_constraintBottom_toTopOf="@+id/location_empty"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/location_empty"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/ic_baseline_location_off_24"
+        android:elevation="30dp"
+        android:background="@drawable/roundcorner"
+        app:layout_constraintBottom_toTopOf="@+id/Distance_direction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginEnd="15dp"
+        />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/Distance_direction"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="15dp"
+        android:elevation="40dp"
+        android:weightSum="100"
+        android:background="#C0C0C0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="55"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:weightSum="100">
+            <TextView
+                android:id="@+id/pl_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="60"
+                android:text="Name"
+                android:paddingStart="15dp"
+                android:textSize="15sp"
+                android:gravity="center_vertical"
+                tools:ignore="NestedWeights" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="40">
+                <ImageView
+                    android:layout_marginStart="15dp"
+                    android:layout_width="24dp"
+                    android:src="@drawable/directions_walk"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:id="@+id/Distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="t"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:textColor="#D31027"
+                    android:textSize="15sp"/>
+                <ImageView
+                    android:layout_marginStart="15dp"
+                    android:layout_width="24dp"
+                    android:src="@drawable/timer"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="t"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:layout_height="0dp">
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_height="1dp"
+                android:alpha="0.6"
+                android:background="@color/black"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="40"
+            android:background="@drawable/ripple"
+            android:layout_height="0dp">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/direct"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:paddingStart="15dp"
+                android:elevation="40dp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_shade"
+                android:text="@string/direction"
+                android:drawableStart="@drawable/ic_baseline_directions_24"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!-- <androidx.drawerlayout.widget.DrawerLayout
+         android:id="@+id/drawerlayout"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:fitsSystemWindows="true"
+         tools:openDrawer="start"
+         >
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical">
+
+             <androidx.appcompat.widget.Toolbar
+                 android:id="@+id/toolbar"
+                 android:layout_width="match_parent"
+                 android:layout_height="?attr/actionBarSize"
+                 android:background="@color/maroon"
+                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+             <FrameLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:id="@+id/framelayout"/>
+         </LinearLayout>
+         <com.google.android.material.navigation.NavigationView
+             android:id="@+id/navview"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:layout_gravity="start"
+             app:headerLayout="@layout/nav_header"
+             app:menu="@menu/drawer" />
+     </androidx.drawerlayout.widget.DrawerLayout>
+ -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

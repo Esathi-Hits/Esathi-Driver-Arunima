@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">E-Sathi Driver</string>
+    <string name="todo">TODO</string>
+    <string name="e_sathi_driver">E-Sathi Driver</string>
+    <string name="desc">Desc</string>
+    <string name="textview">Title</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="enter_phone_no">Phone No.</string>
+    <string name="code">Code</string>
+    <string name="generate_otp">Generate Otp</string>
+    <string name="back">Back</string>
+    <string name="otp_verificaton">Otp Verificaton</string>
+    <string name="enter_6_digit_otp_here_for_verification">Enter 6 digit otp here for verification</string>
+    <string name="resend_otp">Resend Otp</string>
+    <string name="verify">VERIFY</string>
+    <string name="select_profile_image">Select Profile Image</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="permanent_address">Permanent Address</string>
+    <string name="pincode">Pincode</string>
+    <string name="email_optional">Email(optional)</string>
+    <string name="license_number">License Number</string>
+    <string name="vehicle_model">Vehicle Brand &amp; Model</string>
+    <string name="Registered">All the Information and Document Updated</string>
+    <string name="Next_okay">Click Ok to Move Further</string>
+    <string name="vehicle_number">Vehicle Number</string>
+    <string name="frist_name">Frist name</string>
+    <string name="city">City</string>
+    <string name="last_name">Last name</string>
+    <string name="ok">OK</string>
+    <string name="search">Search</string>
+    <string name="pleaseCheckInternetConnection">Please check Internet connection</string>
+    <string name="direction">Direction</string>
+    <string name="navigate">Navigate</string>
+    <string name="recenter">Recenter</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="send">Send</string>
+    <string name="about_text">
+    <ul>
+        <li>Select the customer whom you want to serve.</li>
+        <li>Click on CONFIRM and reach to the location within 5-10 minutes.</li>
+        <li>After completing the journey, take the amount and reach to the next customer.</li>
+    </ul>
+    </string>
+</resources>
