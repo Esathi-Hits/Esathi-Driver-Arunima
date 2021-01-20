@@ -25,11 +25,12 @@
     <string name="Registered">All the Information and Document Updated</string>
     <string name="Next_okay">Click Ok to Move Further</string>
     <string name="vehicle_number">Vehicle Number</string>
-    <string name="frist_name">Frist name</string>
+    <string name="frist_name">First name</string>
     <string name="city">City</string>
     <string name="last_name">Last name</string>
     <string name="ok">OK</string>
-    <string name="search">Search</string>
+    <string name="search">Search Destination</string>
+    <string name="searchPickup">Pickup Location</string>
     <string name="pleaseCheckInternetConnection">Please check Internet connection</string>
     <string name="direction">Direction</string>
     <string name="navigate">Navigate</string>

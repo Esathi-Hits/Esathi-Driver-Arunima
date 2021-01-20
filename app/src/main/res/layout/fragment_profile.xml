@@ -3,12 +3,168 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment"
+    android:background="@drawable/back10">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="48dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
+
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintVertical_bias="0"
+
+                android:src="@drawable/person_24"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp"
+                />
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/person_24"
+                android:text="Name: Akanksha"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:drawablePadding="8dp"
+                android:alpha=".7"
+                />
+            <TextView
+                android:id="@+id/text_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/age"
+                android:text="Age: 30"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:layout_margin="8dp"
+                android:drawablePadding="8dp"
+                android:alpha=".7"
+                />
+            <TextView
+                android:id="@+id/text_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/location"
+                android:text="Location: Kidwai Nagar"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:layout_margin="8dp"
+                android:drawablePadding="8dp"
+                android:alpha=".7"
+                />
+            <TextView
+                android:id="@+id/text_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/city"
+                android:text="City: Kanpur"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:layout_margin="8dp"
+                android:drawablePadding="8dp"
+                android:alpha=".7"
+                />
+            <TextView
+                android:id="@+id/text_pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/pincode"
+                android:text="Pincode: 123456"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:layout_margin="8dp"
+                android:drawablePadding="8dp"
+                android:alpha=".7"
+                />
+            <TextView
+                android:id="@+id/text_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/email"
+                android:text="Mail: abc@gmail.com"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:layout_margin="8dp"
+                android:drawablePadding="8dp"
+                android:alpha=".7"
+                />
+            <TextView
+                android:id="@+id/text_license"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/license"
+                android:text="License no: 1234567890"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:layout_margin="8dp"
+                android:drawablePadding="8dp"
+                android:alpha=".7"
+                />
+            <TextView
+                android:id="@+id/text_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/rickshaw_model"
+                android:text="Model: xyz"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:layout_margin="8dp"
+                android:drawablePadding="8dp"
+                android:alpha=".7"
+                />
+            <TextView
+                android:id="@+id/text_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/number_plate"
+                android:text="Number Plate: up1234"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:layout_margin="8dp"
+                android:drawablePadding="8dp"
+                android:alpha=".7"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                style="@style/ButtonStyle"
+                android:text="Update Profile"
+                android:gravity="center"
+                />
+        </LinearLayout>
+    </ScrollView>
+
 
 </FrameLayout>

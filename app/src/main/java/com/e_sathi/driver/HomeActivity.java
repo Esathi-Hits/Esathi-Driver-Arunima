@@ -84,6 +84,7 @@ public class HomeActivity  extends Fragment implements OnMapReadyCallback, Locat
     private ImageView iv1;
     private List<LatLng> listOfLatLng;
     private EditText autoSuggestText;
+    private EditText pickupLocationText;
     private RecyclerView recyclerView;
     private LineManager lineManager;
     private LinearLayoutManager mLayoutManager;
@@ -128,6 +129,7 @@ public class HomeActivity  extends Fragment implements OnMapReadyCallback, Locat
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
 
+
         initReferences(view);
         initListeners();
         autoSuggestText.setOnTouchListener(new View.OnTouchListener() {
@@ -137,6 +139,16 @@ public class HomeActivity  extends Fragment implements OnMapReadyCallback, Locat
                 return false;
             }
         });
+        /*pickupLocationText.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                CameraPosition cameraPosition = new CameraPosition.Builder().target(new LatLng(
+                        lat1, long1)).zoom(16).tilt(0).build();
+                mapmyIndiaMaps.setCameraPosition(cameraPosition);
+                tp = 0;
+                return false;
+            }
+        });*/
         currentlocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -244,6 +256,8 @@ public class HomeActivity  extends Fragment implements OnMapReadyCallback, Locat
     private void initListeners() {
         autoSuggestText.addTextChangedListener(this);
         autoSuggestText.setOnEditorActionListener(this);
+        /*pickupLocationText.addTextChangedListener(this);
+        pickupLocationText.setOnEditorActionListener(this);*/
     }
 
     private void initReferences(View view) {

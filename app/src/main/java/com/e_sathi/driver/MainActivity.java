@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                                     @Override
                                     public void onDataChange(@NonNull DataSnapshot dataSnapshot1) {
                                         if(dataSnapshot1.exists()){
-                                            Intent intent1 = new Intent(MainActivity.this, HomeActivity.class);
+                                            Intent intent1 = new Intent(MainActivity.this, NewHomeActivity.class);
                                             intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                             startActivity(intent1);
                                             finish();

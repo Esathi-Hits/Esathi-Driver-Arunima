@@ -23,14 +23,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Direction" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".Register_1" />
         <activity android:name=".Register" />
         <activity android:name=".Verification" />
         <activity android:name=".Authentication" />
         <activity android:name=".Intro_slider" />
+        <activity android:name=".NewHomeActivity"/>
 
-        <activity android:name=".NewHomeActivity">
+
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

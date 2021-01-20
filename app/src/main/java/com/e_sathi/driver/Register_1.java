@@ -384,7 +384,7 @@ public class Register_1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 alertDialog.dismiss();
-                Intent intent = new Intent(Register_1.this,HomeActivity.class);
+                Intent intent = new Intent(Register_1.this,NewHomeActivity.class);
                 startActivity(intent);
                 finish();
             }
